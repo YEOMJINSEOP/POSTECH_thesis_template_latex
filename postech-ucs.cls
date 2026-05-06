@@ -111,8 +111,8 @@
     \else \fi }
 \AtEndDocument{}                             % \end{document}와 함께 실행
 
-%% 편집용지 설정 ver0.5
-\usepackage[paperheight=257mm,paperwidth=182mm,
+%% 편집용지 설정 (학위논문 작성 지침 2026.4.1, 1.바.①)
+\usepackage[paperheight=297mm,paperwidth=210mm,
 			left=25mm,right=25mm,top=35mm,bottom=30mm]{geometry}
 %상단여백 20
 %하단여백 15
@@ -121,7 +121,7 @@
 %왼쪽 25
 %오른쪽 25
 %top=상단여백+머리말 bottom=하단여백+꼬리말
-%용지 사이즈 JIS B5 257X182 (국내 4X6 배판)
+%용지 사이즈 A4 (210mm × 297mm)
 
 %% ver0.2 : blank page 정의
 \usepackage{afterpage}
@@ -251,8 +251,8 @@
     \ifthenelse{\equal{#1}{MS}}
 	    {\renewcommand{\@degreeCode}{\@degreePrefix #1}
     	\renewcommand{\@childDeptNameKor}{신소재공학과}
-    	\renewcommand{\@childDeptNameEng}{Department of Material Science and Engineering}
-        \renewcommand{\@programDeptNameEng}{Material Science and Engineering}
+    	\renewcommand{\@childDeptNameEng}{Department of Materials Science and Engineering}
+        \renewcommand{\@programDeptNameEng}{Materials Science and Engineering}
     	\renewcommand{\@degreeField}{#2}} {}
     \ifthenelse{\equal{#1}{ME}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
@@ -286,9 +286,9 @@
          \renewcommand{\@degreeField}{#2}} {}
      \ifthenelse{\equal{#1}{CITE}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
-         \renewcommand{\@childDeptNameKor}{창의IT융합공학과}
-         \renewcommand{\@childDeptNameEng}{Department of Creative IT Engineering}
-         \renewcommand{\@programDeptNameEng}{IT Engineering}
+         \renewcommand{\@childDeptNameKor}{IT융합공학과}
+         \renewcommand{\@childDeptNameEng}{Department of Convergence IT Engineering}
+         \renewcommand{\@programDeptNameEng}{Convergence IT Engineering}
          \renewcommand{\@degreeField}{#2}} {}
      \ifthenelse{\equal{#1}{EV}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
@@ -311,14 +311,14 @@
      \ifthenelse{\equal{#1}{AMS}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
          \renewcommand{\@childDeptNameKor}{첨단재료과학부}
-         \renewcommand{\@childDeptNameEng}{Division of Advanced Material Science}
-         \renewcommand{\@programDeptNameEng}{Advanced Material Science}
+         \renewcommand{\@childDeptNameEng}{Division of Advanced Materials Science}
+         \renewcommand{\@programDeptNameEng}{Advanced Materials Science}
          \renewcommand{\@degreeField}{#2}} {}
      \ifthenelse{\equal{#1}{IBB}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
-         \renewcommand{\@childDeptNameKor}{융합생명공학부}
-         \renewcommand{\@childDeptNameEng}{Division of Integrative Biosciences and Biotechnology}
-         \renewcommand{\@programDeptNameEng}{Integrative Bioscience and Bioengineering}
+         \renewcommand{\@childDeptNameKor}{시스템생명공학부}
+         \renewcommand{\@childDeptNameEng}{Division of Interdisciplinary Bioscience \& Bioengineering}
+         \renewcommand{\@programDeptNameEng}{Interdisciplinary Bioscience and Bioengineering}
          \renewcommand{\@degreeField}{#2}} {}
     \ifthenelse{\equal{#1}{DANE}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
@@ -326,23 +326,103 @@
          \renewcommand{\@childDeptNameEng}{Division of Advanced Nuclear Engineering}
          \renewcommand{\@programDeptNameEng}{Advanced Nuclear Engineering}
          \renewcommand{\@degreeField}{#2}} {}
-     \ifthenelse{\equal{#1}{I-BIO}}
-	    {\renewcommand{\@degreeCode}{\@degreePrefix #1}
-    	\renewcommand{\@childDeptNameKor}{시스템생명공학부}
-    	\renewcommand{\@childDeptNameEng}{School of Interdisciplinary Bioscience and Bioengineering}
-        \renewcommand{\@programDeptNameEng}{Interdisciplinary Bioscience and Bioengineering}
-    	\renewcommand{\@degreeField}{#2}} {}
     \ifthenelse{\equal{#1}{TIM}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
          \renewcommand{\@childDeptNameKor}{기술경영과정}
          \renewcommand{\@childDeptNameEng}{Graduate Program for Technology and Innovation Management}
          \renewcommand{\@programDeptNameEng}{Technology and Innovation Management}
          \renewcommand{\@degreeField}{#2}} {}
-    \ifthenelse{\equal{#1}{GIFT}}
+
+    %% 반도체대학원 (Graduate School of Semiconductor Technology)
+    \ifthenelse{\equal{#1}{ST}}
         {\renewcommand{\@degreeCode}{\@degreePrefix #1}
-         \renewcommand{\@childDeptNameKor}{철강‧에너지소재대학원}
-         \renewcommand{\@childDeptNameEng}{Graduate Institute of Ferrous and Energy materials Technology}
-         \renewcommand{\@programDeptNameEng}{Ferrous and Energy materials Technology}
+         \renewcommand{\@childDeptNameKor}{반도체대학원}
+         \renewcommand{\@childDeptNameEng}{Graduate School of Semiconductor Technology}
+         \renewcommand{\@programDeptNameEng}{Semiconductor Technology}
+         \renewcommand{\@degreeField}{#2}} {}
+
+    %% 융합대학원 (Graduate School of Convergence Science and Technology)
+    \ifthenelse{\equal{#1}{SDS}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{소셜데이터사이언스 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Social Data Science}
+         \renewcommand{\@programDeptNameEng}{Social Data Science}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{MED}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{의과학 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Medical Science and Engineering}
+         \renewcommand{\@programDeptNameEng}{Medical Science and Engineering}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{DST}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{국방과학기술 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Defense Science and Technology}
+         \renewcommand{\@programDeptNameEng}{Defense Science and Technology}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{MSI}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{경영과학 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Management Science}
+         \renewcommand{\@programDeptNameEng}{Management Science}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{CFT}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{푸드테크융합 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Convergence Food Technology}
+         \renewcommand{\@programDeptNameEng}{Convergence Food Technology}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{QIS}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{양자정보과학 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Quantum Information Science}
+         \renewcommand{\@programDeptNameEng}{Quantum Information Science}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{IDS}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{산업데이터사이언스 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Industrial Data Science}
+         \renewcommand{\@programDeptNameEng}{Industrial Data Science}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{SYN}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{융합대학원}
+         \renewcommand{\@childDeptNameKor}{합성생물학 전공}
+         \renewcommand{\@parentDeptNameEng}{Graduate School of Convergence Science and Technology}
+         \renewcommand{\@childDeptNameEng}{Major in Synthetic Biology}
+         \renewcommand{\@programDeptNameEng}{Synthetic Biology}
+         \renewcommand{\@degreeField}{#2}} {}
+
+    %% 친환경소재대학원 (Graduate Institute of Ferrous \& Eco Materials Technology)
+    \ifthenelse{\equal{#1}{FT}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{친환경소재대학원}
+         \renewcommand{\@childDeptNameKor}{친환경소재학과}
+         \renewcommand{\@parentDeptNameEng}{Graduate Institute of Ferrous \& Eco Materials Technology}
+         \renewcommand{\@childDeptNameEng}{Department of Ferrous \& Eco Materials Technology}
+         \renewcommand{\@programDeptNameEng}{Ferrous and Eco Materials Technology}
+         \renewcommand{\@degreeField}{#2}} {}
+    \ifthenelse{\equal{#1}{BE}}
+        {\renewcommand{\@degreeCode}{\@degreePrefix #1}
+         \renewcommand{\@parentDeptNameKor}{친환경소재대학원}
+         \renewcommand{\@childDeptNameKor}{배터리공학과}
+         \renewcommand{\@parentDeptNameEng}{Graduate Institute of Ferrous \& Eco Materials Technology}
+         \renewcommand{\@childDeptNameEng}{Department of Battery Engineering}
+         \renewcommand{\@programDeptNameEng}{Battery Engineering}
          \renewcommand{\@degreeField}{#2}} {}
 
     \renewcommand{\@affFullNameKor}{%               % 학과/전공 한글이름
@@ -435,7 +515,8 @@
     \renewcommand{\baselinestretch}{1.3}%
    \thispagestyle{empty} \noindent%
     \begin{minipage}[t][][t]{\textwidth}
-   		\vspace{2mm}
+   		% 신지침 참조 1: 표지 상단 5cm (용지 여백 3.5cm 포함) → 추가 1.5cm
+   		\vspace{15mm}
         \begin{center}
             \huge
             \if@isDoctor
@@ -443,7 +524,8 @@
             \else
                 \fontsize{16pt}{16pt}\selectfont Master's Thesis \\
             \fi
-			\vspace{23mm}
+			% 신지침 참조 1: 헤더와 제목 사이 2.5cm
+			\vspace{25mm}
             \fontsize{21pt}{21pt}\selectfont \@titleEng
         \end{center}
     \end{minipage}\vfill%\\[30mm]
